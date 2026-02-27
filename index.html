@@ -20,18 +20,29 @@
             scroll-behavior: smooth;
         }
 
+        /* ================= NAVBAR ================= */
         .navbar {
             backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
         }
 
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* ================= HERO ================= */
         .hero {
-            padding: 120px 0;
+            padding: 140px 0 100px;
         }
 
         .hero h1 {
             font-size: 56px;
             font-weight: 800;
+            line-height: 1.2;
         }
 
         .gradient-text {
@@ -44,8 +55,14 @@
             border-radius: 50px;
             padding: 12px 28px;
             font-weight: 600;
+            transition: 0.3s ease;
         }
 
+        .btn-modern:hover {
+            transform: translateY(-3px);
+        }
+
+        /* ================= CARD ================= */
         .card-modern {
             border: none;
             border-radius: 20px;
@@ -57,6 +74,7 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
         }
 
+        /* ================= SECTION ================= */
         .section-padding {
             padding: 100px 0;
         }
@@ -68,12 +86,64 @@
             border-radius: 30px;
             font-size: 14px;
             margin: 5px;
+            display: inline-block;
         }
 
+        /* ================= FOOTER ================= */
         .footer {
             background: #111827;
             color: white;
-            padding: 60px 0;
+            padding: 70px 0;
+        }
+
+        /* ================= MOBILE RESPONSIVE ================= */
+        @media (max-width: 991px) {
+
+            .hero {
+                padding: 120px 0 80px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero img {
+                margin-top: 40px;
+                max-width: 80%;
+            }
+
+            .section-padding {
+                padding: 70px 0;
+            }
+
+            .btn-modern {
+                padding: 10px 22px;
+                font-size: 14px;
+            }
+
+            .card-modern:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .lead {
+                font-size: 15px;
+            }
+
+            .badge-skill {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
         }
     </style>
 </head>
@@ -81,7 +151,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm navbar-light">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">Muhamad Faisal Bahri</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
@@ -104,8 +174,7 @@
                 <div class="col-lg-7">
                     <h1 class="mb-4">
                         Software Engineer <br>
-                        &emsp;&emsp; & <br>
-                        <span class="gradient-text">Web Developer</span>
+                        <span class="gradient-text">& Web Developer</span>
                     </h1>
                     <p class="lead mb-4 text-muted">
                         I design and develop scalable, user-focused, and performance-driven web applications.
@@ -238,7 +307,7 @@
             <div class="d-flex flex-wrap justify-content-center gap-3">
 
                 <!-- Email Button -->
-                <a href="mailto:faisalzz725@email.com" class="btn btn-light btn-modern">
+                <a href="mailto:faisalzz725@gmail.com" class="btn btn-light btn-modern">
                     📧 Email Me
                 </a>
 
